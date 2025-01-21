@@ -1,0 +1,163 @@
+.containerLogin {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.containerFormLogin {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: 1000px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: rgba(245, 224, 139, 0.20);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.23);
+}
+
+@media (max-width: 768px) {
+    .containerFormLogin {
+        flex-direction: column;
+        height: auto;
+        max-width: 90%;
+    }
+
+    .formLogin {
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .containerSubscribeLogin {
+        width: 100%;
+        border-radius: 0px 0px 20px 20px;
+    }
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    gap: 10px;
+    padding-top: 4%;
+    color: #383838;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.formLogin p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.formLogin a { 
+    text-decoration: none;
+    color: #4d4a4a;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.formLogin a:hover {
+    color: #F27D07;
+}
+
+.formLogin button {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #F27D07;
+    color: #ffffff;
+    font-weight: 800;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formLogin button:hover {
+    background-color: #FF9500;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+.formLogin input {
+    padding-left: 10px;
+    width: 300px;
+    height: 40px;
+    background-color: #FF8000;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.23);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.formLogin input:focus {
+    background-color: #FBE6D2;
+    border-color: #F27D07;
+    outline: none;
+}
+
+.containerSubscribeLogin {
+    width: 40%;
+    border-radius: 0px 30px 30px 0px;
+    background: url(../../../assets/formbackground.jpg) lightgray 50% / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+
+.containerSubscribeLogin h2 {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: 80%;
+    padding-top: 35%;
+    
+}
+
+.containerSubscribeLogin div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.containerSubscribeLogin a {
+    color: #FFF;
+    font-weight: 400;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.containerSubscribeLogin a:hover {
+    color: #FBE6D2;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin: 10px 0; /* Espaçamento em relação ao texto */
+  }
+  
+  .social-icons .icon {
+    font-size: 24px; /* Tamanho dos ícones */
+    color: #f27d07; /* Cor laranja */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animação ao passar o mouse */
+    cursor: pointer;
+  }
+  
+  .social-icons .icon:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+    color: #ff9500; /* Altera a cor ao passar o mouse */
+  }
+  
