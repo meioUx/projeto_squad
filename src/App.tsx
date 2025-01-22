@@ -28,7 +28,7 @@ function App() {
           <Route path="/perfil" element={<Profile />} />
           <Route path="/criarsquad" element={<CreateSquad />} />
           <Route path="/criarprojeto" element={<CreateProject />} />
-          <Route path="/adicionarmembo" element={<AddMember />} />
+          <Route path="/adicionarmembro" element={<AddMember />} />
         </Routes>
       </AppProvider>
     </Router>
