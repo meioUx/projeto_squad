@@ -1,5 +1,8 @@
-import "./forgot.style.css"
+import "./forgot.style.css";
+import { useNavigate } from "react-router-dom";
+
 export function Forgot() {
+  const navigate = useNavigate();
 
   function handleSubmit(e: any) {
     e.preventDefault();
@@ -10,33 +13,31 @@ export function Forgot() {
 
     console.log(formJson);
   }
+
   return (
     <div className="containerForgot">
       <div className="containerFormForgot">
+        <div className="containerSubscribeForgot">
+          <h2>Recupere seu acesso</h2>
+          <div>
+            <a>Não tem uma conta?</a>
+            <button type="button" onClick={() => navigate("/register")}>
+              Cadastre-se
+            </button>
+          </div>
+        </div>
         <form method="post" onSubmit={handleSubmit} className="formForgot">
-          <h2>
-            Conecte-se com
-          </h2>
-          <p>
-            Digite seu e-mail para a recuperar sua senha
-          </p>
+          <h2>Vamos recuperar sua senha?</h2>
+          <p>Digite seu e-mail para recuperar sua senha</p>
           <label>
             <input name="email" placeholder="Email" />
           </label>
           <button type="submit">Enviar</button>
+          <a className="login-link" onClick={() => navigate("/login")}>
+            Quer tentar fazer seu login novamente?
+          </a>
         </form>
-        <div className="containerSubscribeForgot">
-          <h2>
-            Vamos recuperar sua senha?
-          </h2>
-          <div>
-            <a>
-              Não tem uma conta?
-            </a>
-            <button type="submit">Cadastre-se</button>
-          </div>
-        </div>
       </div>
     </div>
-  )
+  );
 }
