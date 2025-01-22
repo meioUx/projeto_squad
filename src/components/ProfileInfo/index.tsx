@@ -1,7 +1,22 @@
 import imageUser from "../../assets/imageUser.jpg"
 import headerBanner from "../../assets/headerBanner.png"
 import "./profileInfo.style.css"
+import { NavLink } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { api, endpoint } from "../../services/api"
+import { ISquad } from "../../interfaces/squad.interface"
+import { IProject } from "../../interfaces/projects.interface"
 export function ProfileInfo() {
+    const [squads, setSquads] = useState<ISquad[]>([])
+    const [projects, setProjects] = useState<IProject[]>([])
+    useEffect(() => {
+        (async () => {
+            const responseSquad = await api.get(endpoint.squads)
+            const responseProjects = await api.get(endpoint.projetos)
+            setSquads(responseSquad.data)
+            setProjects(responseProjects.data)
+        })()
+    }, [])
     return (
         <div
             className="containerProfileInfo"
@@ -38,25 +53,67 @@ export function ProfileInfo() {
             <div
                 className="squadInfo"
             >
-                <div
-                    className="titleInfo"
-                >
+                <NavLink to={"/criarsquad"} className="titleInfo" style={{
+                    alignSelf: 'flex-start'
+                }}>
                     SQUAD
+                </NavLink>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: 5
+                    }}
+                >
+                    {
+                        squads.map(squad => (
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    backgroundColor: '#d3d3d3',
+                                    padding: 20,
+                                    borderRadius: 100,
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}
+                            >
+                                {squad.nome}
+                            </div>
+                        ))
+                    }
                 </div>
-
             </div>
             <div
                 className="projetoInfo"
             >
-                <div
-                    className="titleInfo"
+                <NavLink to={"/criarprojeto"} className="titleInfo"
                     style={{
                         alignSelf: 'flex-start'
                     }}
                 >
                     PROJETO
+                </NavLink>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: 5
+                    }}
+                >
+                    {
+                        projects.map(project => (
+                            <div
+                                style={{
+                                    backgroundColor: '#d3d3d3',
+                                    padding: 5,
+                                    borderRadius: 10
+                                }}
+                            >
+                                {project.nome}
+                            </div>
+                        ))
+                    }
                 </div>
-
             </div>
         </div>
     )
