@@ -1,0 +1,15 @@
+.CommonContainerInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.CommonContainerInput label {
+    font-weight: 600;
+}
+
+.CommonContainerInput input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px #a1a1a1 solid
+}

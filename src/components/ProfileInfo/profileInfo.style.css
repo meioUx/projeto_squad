@@ -9,9 +9,11 @@
 
 .titleInfo {
     background-color: #FEDA77;
-    border-radius: 20px;
-    font-weight: 800;
-    padding: 3px 5px;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 1.5%;
+    font-size: 13px;
+    align-items: center;
 }
 
 .squadInfo {
