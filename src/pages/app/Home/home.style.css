@@ -21,13 +21,13 @@
 }
 
 .buttonInputFeedHome {
-    border-radius: 20px;
+    border-radius: 15px;
     align-self: flex-end;
     padding: 10px 15px;
     font-size: 15px;
     background-color: #F27D07;
-    font-weight: 700;
-    color: #151414;
+    font-weight: 550;
+    color: #fffcfc;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.23);
     border: 0;
 }
@@ -44,3 +44,6 @@
     border-radius: 40px;
     height: 500px;
 }
+
+
+

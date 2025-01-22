@@ -28,7 +28,7 @@ export function Forgot() {
         </div>
         <form method="post" onSubmit={handleSubmit} className="formForgot">
           <h2>Vamos recuperar sua senha?</h2>
-          <p>Digite seu e-mail para recuperar sua senha</p>
+          <p>Digite e-mail cadastrado para recuperação</p>
           <label>
             <input name="email" placeholder="Email" />
           </label>
