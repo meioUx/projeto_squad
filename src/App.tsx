@@ -8,6 +8,7 @@ import { AppProvider } from "./context/app";
 import { Register } from "./pages/auth/Register";
 import { Forgot } from "./pages/auth/Forgot";
 import { Home } from "./pages/app/Home";
+import 'antd/dist/reset.css';
 
 function App() {
 
